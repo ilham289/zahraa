@@ -1,0 +1,12 @@
+Ipconfig/release
+Ipconfig/renew
+
+ipconfig/flushdns
+
+int tcp set global chimney=enabled
+int tcp set global autotuninglevel=normal
+int tcp set global dca=enabled
+int tcp set global netdma=enabled
+int tcp set global ecncapability=enabled
+
+netsh winsock reset
