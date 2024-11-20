@@ -1,30 +1,9 @@
 <?php
-include 'config.php';
-session_start();
- 
-if (isset($_SESSION['username'])) {
-    header("Location: berhasil_login.php");
-    exit();
-}
- 
-if (isset($_POST['submit'])) {
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = hash('sha256', $_POST['password']); // Hash the input password using SHA-256
- 
-    $sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
-    $result = mysqli_query($conn, $sql);
- 
-    if ($result->num_rows > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $_SESSION['username'] = $row['username'];
-        header("Location: berhasil_login.php");
-        exit();
-    } else {
-        echo "<script>alert('Email atau password Anda salah. Silakan coba lagi!')</script>";
-    }
-}
+require_once "config.php";
+if(isset($_SESSION['user])) {
+echo "<script>window.location='".base_url()."';</script>
+} else {
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
