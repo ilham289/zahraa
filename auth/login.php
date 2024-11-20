@@ -1,3 +1,10 @@
+<?php
+require_once "../_config/config.php";
+if(isset($_session['user']] {
+	echo "<script>window.location='".base_url()."';</script>;
+} else {
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -298,4 +305,6 @@
   
 </body>
 </html>
-
+<?/php
+  }
+  ?>
