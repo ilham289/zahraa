@@ -150,7 +150,12 @@ section .signin .content .form .inputBox i
 	color: #0f0;
 	font-weight: 600;
 }
-.signin .content .form .inputBox input[type="submit"]
+.signin .content .form .links a:nth-child(3)
+{
+	color: #0f0;
+	font-weight: 600;
+}
+.signin .content .form .links .inputBox input[type="submit"]
 {
 	padding: 10px;
 	background: #0f0;
